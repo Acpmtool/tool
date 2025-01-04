@@ -1,5 +1,5 @@
 import random
-import cpmnuker
+import Termuxtool
 import base64
 from time import sleep
 import os, signal, sys
