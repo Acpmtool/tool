@@ -281,20 +281,8 @@ if __name__ == "__main__":
                     console.print("[bold yellow][!] Пожалуйста, используйте допустимые значения.[/bold yellow]")
                     sleep(2)
                     continue
-            elif service == 7:  # Номера
-                console.print("[bold cyan][%] Предоставление номеров[/bold cyan]: ", end=None)
-                if cpm.set_player_plates():
-                    console.print("[bold green]УСПЕШНО (✔)[/bold green]")
-                    console.print("==================================")
-                    answ = Prompt.ask("[bold cyan][?] Хотите выйти?[/bold cyan]", choices=["y", "n"], default="n")
-                    if answ == "y": console.print(f"[bold yellow][!] Спасибо за использование нашего инструмента, пожалуйста, присоединяйтесь к нашему каналу в телеграм[/bold yellow]: [bold blue]@{base64.b64decode('Q1BNTnVrZXJPZmZpY2lhbA==').decode('utf-8')}[/bold blue].")
-                    else: continue
-                else:
-                    console.print("[bold red]НЕ УСПЕШНО (✘)[/bold red]")
-                    console.print("[bold yellow][!] Пожалуйста, попробуйте снова.[/bold yellow]")
-                    sleep(2)
-                    continue
-            elif service == 8:  # Удалить аккаунт
+
+            elif service == 7:  # Удалить аккаунт
                 console.print("[bold cyan][!] После удаления вашего аккаунта возврата нет !!.[/bold cyan]")
                 answ = Prompt.ask("[bold cyan][?] Хотите удалить этот аккаунт?![/bold cyan]", choices=["y", "n"], default="n")
                 if answ == "y":
@@ -304,7 +292,7 @@ if __name__ == "__main__":
                     console.print(f"[bold yellow][!] Спасибо за использование нашего инструмента, пожалуйста, присоединяйтесь к нашему каналу в телеграм[/bold yellow]: [bold blue]@{base64.b64decode('Q1BNTnVrZXJPZmZpY2lhbA==').decode('utf-8')}[/bold blue].")
                 else:
                     continue
-            elif service == 9:  # Регистрация аккаунта
+            elif service == 8:  # Регистрация аккаунта
                 console.print("[bold cyan][!] Регистрация нового аккаунта.[/bold cyan]")
                 acc2_email = prompt_valid_value("[bold][?] Электронная почта аккаунта[/bold]", "Email", password=False)
                 acc2_password = prompt_valid_value("[bold][?] Пароль аккаунта[/bold]", "Password", password=False)
@@ -325,7 +313,7 @@ if __name__ == "__main__":
                     console.print("[bold yellow][!] Пожалуйста, попробуйте снова.[/bold yellow]")
                     sleep(2)
                     continue
-            elif service == 10:  # Удалить друзей
+            elif service == 9:  # Удалить друзей
                 console.print("[bold cyan][%] Удаление ваших друзей[/bold cyan]: ", end=None)
                 if cpm.delete_player_friends():
                     console.print("[bold green]УСПЕШНО (✔)[/bold green]")
@@ -338,7 +326,7 @@ if __name__ == "__main__":
                     console.print("[bold yellow][!] Пожалуйста, попробуйте снова.[/bold yellow]")
                     sleep(2)
                     continue
-            elif service == 11:  # Разблокировать все платные машины + Сирену
+            elif service == 10:  # Разблокировать все платные машины + Сирену
                 console.print("[bold yellow]! Заметка[/bold yellow]: эта функция занимает некоторое время, пожалуйста, не отменяйте.")
                 console.print("[bold cyan][%] Разблокировка всех платных машин[/bold cyan]: ", end=None)
                 if cpm.unlock_paid_cars():
@@ -352,7 +340,7 @@ if __name__ == "__main__":
                     console.print("[bold yellow][!] Пожалуйста, попробуйте снова.[/bold yellow]")
                     sleep(2)
                     continue
-            elif service == 12:  # Разблокировать двигатель w16
+            elif service == 11:  # Разблокировать двигатель w16
                 console.print("[bold cyan][%] Разблокировка двигателя w16[/bold cyan]: ", end=None)
                 if cpm.unlock_w16():
                     console.print("[bold green]УСПЕШНО (✔)[/bold green]")
@@ -365,7 +353,7 @@ if __name__ == "__main__":
                     console.print("[bold yellow][!] Пожалуйста, попробуйте снова.[/bold yellow]")
                     sleep(2)
                     continue
-            elif service == 13:  # Разблокировать все гудки
+            elif service == 12:  # Разблокировать все гудки
                 console.print("[bold cyan][%] Разблокировка всех гудков[/bold cyan]: ", end=None)
                 if cpm.unlock_horns():
                     console.print("[bold green]УСПЕШНО (✔)[/bold green]")
@@ -378,7 +366,7 @@ if __name__ == "__main__":
                     console.print("[bold yellow][!] Пожалуйста, попробуйте снова.[/bold yellow]")
                     sleep(2)
                     continue
-            elif service == 14:  # Отключение повреждений двигателя
+            elif service == 13:  # Отключение повреждений двигателя
                 console.print("[bold cyan][%] Разблокировка отключения повреждений[/bold cyan]: ", end=None)
                 if cpm.disable_engine_damage():
                     console.print("[bold green]УСПЕШНО (✔)[/bold green]")
@@ -391,7 +379,7 @@ if __name__ == "__main__":
                     console.print("[bold yellow][!] Пожалуйста, попробуйте снова.[/bold yellow]")
                     sleep(2)
                     continue
-            elif service == 15:  # Неограниченное топливо
+            elif service == 14:  # Неограниченное топливо
                 console.print("[bold cyan][%] Разблокировка неограниченного топлива[/bold cyan]: ", end=None)
                 if cpm.unlimited_fuel():
                     console.print("[bold green]УСПЕШНО (✔)[/bold green]")
@@ -404,7 +392,7 @@ if __name__ == "__main__":
                     console.print("[bold yellow][!] Пожалуйста, попробуйте снова.[/bold yellow]")
                     sleep(2)
                     continue
-            elif service == 16:  # Разблокировать дом 3
+            elif service == 15:  # Разблокировать дом 3
                 console.print("[bold cyan][%] Разблокировка дома 3[/bold cyan]: ", end=None)
                 if cpm.unlock_houses():
                     console.print("[bold green]УСПЕШНО (✔)[/bold green]")
@@ -417,7 +405,7 @@ if __name__ == "__main__":
                     console.print("[bold yellow][!] Пожалуйста, попробуйте снова.[/bold yellow]")
                     sleep(2)
                     continue
-            elif service == 17:  # Разблокировать дым
+            elif service == 16:  # Разблокировать дым
                 console.print("[bold cyan][%] Разблокировка дыма[/bold cyan]: ", end=None)
                 if cpm.unlock_smoke():
                     console.print("[bold green]УСПЕШНО (✔)[/bold green]")
@@ -430,7 +418,7 @@ if __name__ == "__main__":
                     console.print("[bold yellow][!] Пожалуйста, попробуйте снова.[/bold yellow]")
                     sleep(2)
                     continue
-            elif service == 18:  # Изменить победы в гонках
+            elif service == 17:  # Изменить победы в гонках
                 console.print("[bold cyan][!] Введите, сколько гонок вы выиграли.[/bold cyan]")
                 amount = IntPrompt.ask("[bold][?] Сумма[/bold]")
                 console.print("[bold cyan][%] Изменение ваших данных[/bold cyan]: ", end=None)
@@ -451,7 +439,7 @@ if __name__ == "__main__":
                     console.print("[bold yellow][!] Пожалуйста, используйте допустимые значения.[/bold yellow]")
                     sleep(2)
                     continue
-            elif service == 19:  # Изменить поражения в гонках
+            elif service == 18:  # Изменить поражения в гонках
                 console.print("[bold cyan][!] Введите, сколько гонок вы проиграли.[/bold cyan]")
                 amount = IntPrompt.ask("[bold][?] Сумма[/bold]")
                 console.print("[bold cyan][%] Изменение ваших данных[/bold cyan]: ", end=None)
@@ -472,7 +460,7 @@ if __name__ == "__main__":
                     console.print("[bold yellow][!] Пожалуйста, используйте допустимые значения.[/bold yellow]")
                     sleep(2)
                     continue
-            elif service == 20:  # Клонировать аккаунт
+            elif service == 21:  # Клонировать аккаунт
                 console.print("[bold cyan]Пожалуйста, введите данные аккаунта[/bold cyan]:")
                 to_email = prompt_valid_value("[bold][?] Email[/bold]", "Email", password=False)
                 to_password = prompt_valid_value("[bold][?] Password[/bold]", "Password", password=False)
@@ -488,7 +476,7 @@ if __name__ == "__main__":
                     console.print("[bold yellow][!] Пожалуйста, попробуйте снова.[/bold yellow]")
                     sleep(2)
                     continue
-            elif service == 21:  # Разблокировать все машины
+            elif service == 19:  # Разблокировать все машины
                 console.print("[bold yellow]! Заметка[/bold yellow]: эта функция занимает некоторое время, пожалуйста, не отменяйте.")
                 console.print("[bold cyan][%] Разблокировка всех машин[/bold cyan]: ", end=None)
                 if cpm.unlock_all_cars():
@@ -502,7 +490,7 @@ if __name__ == "__main__":
                     console.print("[bold yellow][!] Пожалуйста, попробуйте снова.[/bold yellow]")
                     sleep(2)
                     continue
-            elif service == 22:  # Разблокировать сигнал для всех машин
+            elif service == 20:  # Разблокировать сигнал для всех машин
                 console.print("[bold cyan][%] Разблокировка всех машин с сигналом[/bold cyan]: ", end=None)
                 if cpm.unlock_all_cars_siren():
                     console.print("[bold green]УСПЕШНО.[/bold green]")
