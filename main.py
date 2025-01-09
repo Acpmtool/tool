@@ -1,6 +1,6 @@
 import random
 import Termuxtool
-import base64
+
 from time import sleep
 import os, signal, sys
 from rich.console import Console
@@ -67,7 +67,7 @@ def load_key_data(cpm):
     console.print("[bold][red]========[/red][ ДЕТАЛИ ДОСТУПНОГО КЛЮЧА ][red]========[/red][/bold]")
     console.print(f"[bold green]Доступный ключ [/bold green]: {data.get('access_key')}.")
     console.print(f"[bold green]Telegram ID[/bold green]: {data.get('telegram_id')}.")
-    console.print(f"[bold green]Кредиты    [/bold green]: {(data.get('coins') if not data.get('is_unlimited') else 'Неограниченные')}.", end="\n\n")
+    console.print(f"[bold green]Подписка    [/bold green]: {(data.get('coins') if not data.get('is_unlimited') else 'Пожизненная')}.", end="\n\n")
 
 def prompt_valid_value(content, tag, password=False):
     while True:
@@ -159,7 +159,7 @@ if __name__ == "__main__":
             console.print("[bold cyan](0) : Выйти[/bold cyan]", end="\n\n")
             service = IntPrompt.ask(f"[bold][?] Выберите услугу [red][1-{choices[-1]} или 0][/red][/bold]", choices=choices, show_choices=False)
             if service == 0:  # Выйти
-                console.print(f"[bold yellow][!] Спасибо за использование нашего инструмента, пожалуйста, присоединяйтесь к нашему каналу в телеграм[/bold yellow]: [bold blue]@{base64.b64decode('Q1BNTnVrZXJPZmZpY2lhbA==').decode('utf-8')}[/bold blue].")
+                console.print(f"[bold yellow][!] Спасибо за использование нашего инструмента, пожалуйста, присоединяйтесь к нашему каналу в телеграм[/bold yellow]: [bold blue]@{base64.b64decode('').decode('utf-8')}[/bold blue].")
             elif service == 1:  # Увеличить деньги
                 console.print("[bold cyan][!] Введите, сколько денег вы хотите.[/bold cyan]")
                 amount = IntPrompt.ask("[bold][?] Сумма[/bold]")
@@ -169,7 +169,7 @@ if __name__ == "__main__":
                         console.print("[bold green]УСПЕШНО (✔)[/bold green]")
                         console.print("==================================")
                         answ = Prompt.ask("[bold cyan][?] Хотите выйти?[/bold cyan]", choices=["y", "n"], default="n")
-                        if answ == "y": console.print(f"[bold yellow][!] Спасибо за использование нашего инструмента, пожалуйста, присоединяйтесь к нашему каналу в телеграм[/bold yellow]: [bold blue]@{base64.b64decode('Q1BNTnVrZXJPZmZpY2lhbA==').decode('utf-8')}[/bold blue].")
+                        if answ == "y": console.print(f"[bold yellow][!] Спасибо за использование нашего инструмента, пожалуйста, присоединяйтесь к нашему каналу в телеграм[/bold yellow]: [bold blue]@{base64.b64decode('').decode('utf-8')}[/bold blue].")
                         else: continue
                     else:
                         console.print("[bold red]НЕ УСПЕШНО (✘)[/bold red]")
@@ -190,7 +190,7 @@ if __name__ == "__main__":
                         console.print("[bold green]УСПЕШНО (✔)[/bold green]")
                         console.print("==================================")
                         answ = Prompt.ask("[bold cyan][?] Хотите выйти?[/bold cyan]", choices=["y", "n"], default="n")
-                        if answ == "y": console.print(f"[bold yellow][!] Спасибо за использование нашего инструмента, пожалуйста, присоединяйтесь к нашему каналу в телеграм[/bold yellow]: [bold blue]@{base64.b64decode('Q1BNTnVrZXJPZmZpY2lhbA==').decode('utf-8')}[/bold blue].")
+                        if answ == "y": console.print(f"[bold yellow][!] Спасибо за использование нашего инструмента, пожалуйста, присоединяйтесь к нашему каналу в телеграм[/bold yellow]: [bold blue]@{base64.b64decode('').decode('utf-8')}[/bold blue].")
                         else: continue
                     else:
                         console.print("[bold red]НЕ УСПЕШНО (✘)[/bold red]")
@@ -211,7 +211,7 @@ if __name__ == "__main__":
                     console.print("[bold green]УСПЕШНО (✔)[/bold green]")
                     console.print("==================================")
                     answ = Prompt.ask("[bold cyan][?] Хотите выйти?[/bold cyan]", choices=["y", "n"], default="n")
-                    if answ == "y": console.print(f"[bold yellow][!] Спасибо за использование нашего инструмента, пожалуйста, присоединяйтесь к нашему каналу в телеграм[/bold yellow]: [bold blue]@{base64.b64decode('Q1BNTnVrZXJPZmZpY2lhbA==').decode('utf-8')}[/bold blue].")
+                    if answ == "y": console.print(f"[bold yellow][!] Спасибо за использование нашего инструмента, пожалуйста, присоединяйтесь к нашему каналу в телеграм[/bold yellow]: [bold blue]@{base64.b64decode('').decode('utf-8')}[/bold blue].")
                     else: continue
                 else:
                     console.print("[bold red]НЕ УСПЕШНО (✘)[/bold red]")
@@ -227,7 +227,7 @@ if __name__ == "__main__":
                         console.print("[bold green]УСПЕШНО (✔)[/bold green]")
                         console.print("==================================")
                         answ = Prompt.ask("[bold cyan][?] Хотите выйти?[/bold cyan]", choices=["y", "n"], default="n")
-                        if answ == "y": console.print(f"[bold yellow][!] Спасибо за использование нашего инструмента, пожалуйста, присоединяйтесь к нашему каналу в телеграм[/bold yellow]: [bold blue]@{base64.b64decode('Q1BNTnVrZXJPZmZpY2lhbA==').decode('utf-8')}[/bold blue].")
+                        if answ == "y": console.print(f"[bold yellow][!] Спасибо за использование нашего инструмента, пожалуйста, присоединяйтесь к нашему каналу в телеграм[/bold yellow]: [bold blue]@{base64.b64decode('').decode('utf-8')}[/bold blue].")
                         else: continue
                     else:
                         console.print("[bold red]НЕ УСПЕШНО (✘)[/bold red]")
@@ -248,7 +248,7 @@ if __name__ == "__main__":
                         console.print("[bold green]УСПЕШНО (✔)[/bold green]")
                         console.print("==================================")
                         answ = Prompt.ask("[bold cyan][?] Хотите выйти?[/bold cyan]", choices=["y", "n"], default="n")
-                        if answ == "y": console.print(f"[bold yellow][!] Спасибо за использование нашего инструмента, пожалуйста, присоединяйтесь к нашему каналу в телеграм[/bold yellow]: [bold blue]@{base64.b64decode('Q1BNTnVrZXJPZmZpY2lhbA==').decode('utf-8')}[/bold blue].")
+                        if answ == "y": console.print(f"[bold yellow][!] Спасибо за использование нашего инструмента, пожалуйста, присоединяйтесь к нашему каналу в телеграм[/bold yellow]: [bold blue]@{base64.b64decode('').decode('utf-8')}[/bold blue].")
                         else: continue
                     else:
                         console.print("[bold red]НЕ УСПЕШНО (✘)[/bold red]")
@@ -269,7 +269,7 @@ if __name__ == "__main__":
                         console.print("[bold green]УСПЕШНО (✔)[/bold green]")
                         console.print("==================================")
                         answ = Prompt.ask("[bold cyan][?] Хотите выйти?[/bold cyan]", choices=["y", "n"], default="n")
-                        if answ == "y": console.print(f"[bold yellow][!] Спасибо за использование нашего инструмента, пожалуйста, присоединяйтесь к нашему каналу в телеграм[/bold yellow]: [bold blue]@{base64.b64decode('Q1BNTnVrZXJPZmZpY2lhbA==').decode('utf-8')}[/bold blue].")
+                        if answ == "y": console.print(f"[bold yellow][!] Спасибо за использование нашего инструмента, пожалуйста, присоединяйтесь к нашему каналу в телеграм[/bold yellow]: [bold blue]@{base64.b64decode('').decode('utf-8')}[/bold blue].")
                         else: continue
                     else:
                         console.print("[bold red]НЕ УСПЕШНО (✘)[/bold red]")
@@ -289,7 +289,7 @@ if __name__ == "__main__":
                     cpm.delete()
                     console.print("[bold cyan][%] Удаление вашего аккаунта[/bold cyan]: [bold green]УСПЕШНО (✔)[/bold green].")
                     console.print("==================================")
-                    console.print(f"[bold yellow][!] Спасибо за использование нашего инструмента, пожалуйста, присоединяйтесь к нашему каналу в телеграм[/bold yellow]: [bold blue]@{base64.b64decode('Q1BNTnVrZXJPZmZpY2lhbA==').decode('utf-8')}[/bold blue].")
+                    console.print(f"[bold yellow][!] Спасибо за использование нашего инструмента, пожалуйста, присоединяйтесь к нашему каналу в телеграм[/bold yellow]: [bold blue]@{base64.b64decode('').decode('utf-8')}[/bold blue].")
                 else:
                     continue
             elif service == 8:  # Регистрация аккаунта
@@ -319,7 +319,7 @@ if __name__ == "__main__":
                     console.print("[bold green]УСПЕШНО (✔)[/bold green]")
                     console.print("==================================")
                     answ = Prompt.ask("[bold cyan][?] Хотите выйти?[/bold cyan]", choices=["y", "n"], default="n")
-                    if answ == "y": console.print(f"[bold yellow][!] Спасибо за использование нашего инструмента, пожалуйста, присоединяйтесь к нашему каналу в телеграм[/bold yellow]: [bold blue]@{base64.b64decode('Q1BNTnVrZXJPZmZpY2lhbA==').decode('utf-8')}[/bold blue].")
+                    if answ == "y": console.print(f"[bold yellow][!] Спасибо за использование нашего инструмента, пожалуйста, присоединяйтесь к нашему каналу в телеграм[/bold yellow]: [bold blue]@{base64.b64decode('').decode('utf-8')}[/bold blue].")
                     else: continue
                 else:
                     console.print("[bold red]НЕ УСПЕШНО (✘)[/bold red]")
@@ -333,7 +333,7 @@ if __name__ == "__main__":
                     console.print("[bold green]УСПЕШНО (✔)[/bold green]")
                     console.print("==================================")
                     answ = Prompt.ask("[bold cyan][?] Хотите выйти?[/bold cyan]", choices=["y", "n"], default="n")
-                    if answ == "y": console.print(f"[bold yellow][!] Спасибо за использование нашего инструмента, пожалуйста, присоединяйтесь к нашему каналу в телеграм[/bold yellow]: [bold blue]@{base64.b64decode('Q1BNTnVrZXJPZmZpY2lhbA==').decode('utf-8')}[/bold blue].")
+                    if answ == "y": console.print(f"[bold yellow][!] Спасибо за использование нашего инструмента, пожалуйста, присоединяйтесь к нашему каналу в телеграм[/bold yellow]: [bold blue]@{base64.b64decode('').decode('utf-8')}[/bold blue].")
                     else: continue
                 else:
                     console.print("[bold red]НЕ УСПЕШНО (✘)[/bold red]")
@@ -346,7 +346,7 @@ if __name__ == "__main__":
                     console.print("[bold green]УСПЕШНО (✔)[/bold green]")
                     console.print("==================================")
                     answ = Prompt.ask("[bold cyan][?] Хотите выйти?[/bold cyan]", choices=["y", "n"], default="n")
-                    if answ == "y": console.print(f"[bold yellow][!] Спасибо за использование нашего инструмента, пожалуйста, присоединяйтесь к нашему каналу в телеграм[/bold yellow]: [bold blue]@{base64.b64decode('Q1BNTnVrZXJPZmZpY2lhbA==').decode('utf-8')}[/bold blue].")
+                    if answ == "y": console.print(f"[bold yellow][!] Спасибо за использование нашего инструмента, пожалуйста, присоединяйтесь к нашему каналу в телеграм[/bold yellow]: [bold blue]@{base64.b64decode('').decode('utf-8')}[/bold blue].")
                     else: continue
                 else:
                     console.print("[bold red]НЕ УСПЕШНО (✘)[/bold red]")
@@ -359,7 +359,7 @@ if __name__ == "__main__":
                     console.print("[bold green]УСПЕШНО (✔)[/bold green]")
                     console.print("==================================")
                     answ = Prompt.ask("[bold cyan][?] Хотите выйти?[/bold cyan]", choices=["y", "n"], default="n")
-                    if answ == "y": console.print(f"[bold yellow][!] Спасибо за использование нашего инструмента, пожалуйста, присоединяйтесь к нашему каналу в телеграм[/bold yellow]: [bold blue]@{base64.b64decode('Q1BNTnVrZXJPZmZpY2lhbA==').decode('utf-8')}[/bold blue].")
+                    if answ == "y": console.print(f"[bold yellow][!] Спасибо за использование нашего инструмента, пожалуйста, присоединяйтесь к нашему каналу в телеграм[/bold yellow]: [bold blue]@{base64.b64decode('').decode('utf-8')}[/bold blue].")
                     else: continue
                 else:
                     console.print("[bold red]НЕ УСПЕШНО (✘)[/bold red]")
@@ -372,7 +372,7 @@ if __name__ == "__main__":
                     console.print("[bold green]УСПЕШНО (✔)[/bold green]")
                     console.print("==================================")
                     answ = Prompt.ask("[bold cyan][?] Хотите выйти?[/bold cyan]", choices=["y", "n"], default="n")
-                    if answ == "y": console.print(f"[bold yellow][!] Спасибо за использование нашего инструмента, пожалуйста, присоединяйтесь к нашему каналу в телеграм[/bold yellow]: [bold blue]@{base64.b64decode('Q1BNTnVrZXJPZmZpY2lhbA==').decode('utf-8')}[/bold blue].")
+                    if answ == "y": console.print(f"[bold yellow][!] Спасибо за использование нашего инструмента, пожалуйста, присоединяйтесь к нашему каналу в телеграм[/bold yellow]: [bold blue]@{base64.b64decode('').decode('utf-8')}[/bold blue].")
                     else: continue
                 else:
                     console.print("[bold red]НЕ УСПЕШНО (✘)[/bold red]")
@@ -385,7 +385,7 @@ if __name__ == "__main__":
                     console.print("[bold green]УСПЕШНО (✔)[/bold green]")
                     console.print("==================================")
                     answ = Prompt.ask("[bold cyan][?] Хотите выйти?[/bold cyan]", choices=["y", "n"], default="n")
-                    if answ == "y": console.print(f"[bold yellow][!] Спасибо за использование нашего инструмента, пожалуйста, присоединяйтесь к нашему каналу в телеграм[/bold yellow]: [bold blue]@{base64.b64decode('Q1BNTnVrZXJPZmZpY2lhbA==').decode('utf-8')}[/bold blue].")
+                    if answ == "y": console.print(f"[bold yellow][!] Спасибо за использование нашего инструмента, пожалуйста, присоединяйтесь к нашему каналу в телеграм[/bold yellow]: [bold blue]@{base64.b64decode('').decode('utf-8')}[/bold blue].")
                     else: continue
                 else:
                     console.print("[bold red]НЕ УСПЕШНО (✘)[/bold red]")
@@ -398,7 +398,7 @@ if __name__ == "__main__":
                     console.print("[bold green]УСПЕШНО (✔)[/bold green]")
                     console.print("==================================")
                     answ = Prompt.ask("[bold cyan][?] Хотите выйти?[/bold cyan]", choices=["y", "n"], default="n")
-                    if answ == "y": console.print(f"[bold yellow][!] Спасибо за использование нашего инструмента, пожалуйста, присоединяйтесь к нашему каналу в телеграм[/bold yellow]: [bold blue]@{base64.b64decode('Q1BNTnVrZXJPZmZpY2lhbA==').decode('utf-8')}[/bold blue].")
+                    if answ == "y": console.print(f"[bold yellow][!] Спасибо за использование нашего инструмента, пожалуйста, присоединяйтесь к нашему каналу в телеграм[/bold yellow]: [bold blue]@{base64.b64decode('').decode('utf-8')}[/bold blue].")
                     else: continue
                 else:
                     console.print("[bold red]НЕ УСПЕШНО (✘)[/bold red]")
@@ -411,7 +411,7 @@ if __name__ == "__main__":
                     console.print("[bold green]УСПЕШНО (✔)[/bold green]")
                     console.print("==================================")
                     answ = Prompt.ask("[bold cyan][?] Хотите выйти?[/bold cyan]", choices=["y", "n"], default="n")
-                    if answ == "y": console.print(f"[bold yellow][!] Спасибо за использование нашего инструмента, пожалуйста, присоединяйтесь к нашему каналу в телеграм[/bold yellow]: [bold blue]@{base64.b64decode('Q1BNTnVrZXJPZmZpY2lhbA==').decode('utf-8')}[/bold blue].")
+                    if answ == "y": console.print(f"[bold yellow][!] Спасибо за использование нашего инструмента, пожалуйста, присоединяйтесь к нашему каналу в телеграм[/bold yellow]: [bold blue]@{base64.b64decode('').decode('utf-8')}[/bold blue].")
                     else: continue
                 else:
                     console.print("[bold red]НЕ УСПЕШНО (✘)[/bold red]")
@@ -427,7 +427,7 @@ if __name__ == "__main__":
                         console.print("[bold green]УСПЕШНО (✔)[/bold green]")
                         console.print("==================================")
                         answ = Prompt.ask("[bold cyan][?] Хотите выйти?[/bold cyan]", choices=["y", "n"], default="n")
-                        if answ == "y": console.print(f"[bold yellow][!] Спасибо за использование нашего инструмента, пожалуйста, присоединяйтесь к нашему каналу в телеграм[/bold yellow]: [bold blue]@{base64.b64decode('Q1BNTnVrZXJPZmZpY2lhbA==').decode('utf-8')}[/bold blue].")
+                        if answ == "y": console.print(f"[bold yellow][!] Спасибо за использование нашего инструмента, пожалуйста, присоединяйтесь к нашему каналу в телеграм[/bold yellow]: [bold blue]@{base64.b64decode('').decode('utf-8')}[/bold blue].")
                         else: continue
                     else:
                         console.print("[bold red]НЕ УСПЕШНО (✘)[/bold red]")
@@ -448,7 +448,7 @@ if __name__ == "__main__":
                         console.print("[bold green]УСПЕШНО (✔)[/bold green]")
                         console.print("==================================")
                         answ = Prompt.ask("[bold cyan][?] Хотите выйти?[/bold cyan]", choices=["y", "n"], default="n")
-                        if answ == "y": console.print(f"[bold yellow][!] Спасибо за использование нашего инструмента, пожалуйста, присоединяйтесь к нашему каналу в телеграм[/bold yellow]: [bold blue]@{base64.b64decode('Q1BNTnVrZXJPZmZpY2lhbA==').decode('utf-8')}[/bold blue].")
+                        if answ == "y": console.print(f"[bold yellow][!] Спасибо за использование нашего инструмента, пожалуйста, присоединяйтесь к нашему каналу в телеграм[/bold yellow]: [bold blue]@{base64.b64decode('').decode('utf-8')}[/bold blue].")
                         else: continue
                     else:
                         console.print("[bold red]НЕ УСПЕШНО (✘)[/bold red]")
@@ -469,7 +469,7 @@ if __name__ == "__main__":
                     console.print("[bold green]УСПЕШНО.[/bold green]")
                     console.print("==================================")
                     answ = Prompt.ask("[bold cyan][?] Хотите выйти?[/bold cyan]", choices=["y", "n"], default="n")
-                    if answ == "y": console.print(f"[bold yellow][!] Спасибо за использование нашего инструмента, пожалуйста, присоединяйтесь к нашему каналу в телеграм[/bold yellow]: [bold blue]@{base64.b64decode('Q1BNTnVrZXJPZmZpY2lhbA==').decode('utf-8')}[/bold blue].")
+                    if answ == "y": console.print(f"[bold yellow][!] Спасибо за использование нашего инструмента, пожалуйста, присоединяйтесь к нашему каналу в телеграм[/bold yellow]: [bold blue]@{base64.b64decode('').decode('utf-8')}[/bold blue].")
                     else: continue
                 else:
                     console.print("[bold red]НЕ УСПЕШНО.[/bold red]")
@@ -483,7 +483,7 @@ if __name__ == "__main__":
                     console.print("[bold green]УСПЕШНО (✔)[/bold green]")
                     console.print("==================================")
                     answ = Prompt.ask("[bold cyan][?] Хотите выйти?[/bold cyan]", choices=["y", "n"], default="n")
-                    if answ == "y": console.print(f"[bold yellow][!] Спасибо за использование нашего инструмента, пожалуйста, присоединяйтесь к нашему каналу в телеграм[/bold yellow]: [bold blue]@{base64.b64decode('Q1BNTnVrZXJPZmZpY2lhbA==').decode('utf-8')}[/bold blue].")
+                    if answ == "y": console.print(f"[bold yellow][!] Спасибо за использование нашего инструмента, пожалуйста, присоединяйтесь к нашему каналу в телеграм[/bold yellow]: [bold blue]@{base64.b64decode('').decode('utf-8')}[/bold blue].")
                     else: continue
                 else:
                     console.print("[bold red]НЕ УСПЕШНО (✘)[/bold red]")
@@ -496,7 +496,7 @@ if __name__ == "__main__":
                     console.print("[bold green]УСПЕШНО.[/bold green]")
                     console.print("==================================")
                     answ = Prompt.ask("[bold cyan][?] Хотите выйти?[/bold cyan]", choices=["y", "n"], default="n")
-                    if answ == "y": console.print(f"[bold yellow][!] Спасибо за использование нашего инструмента, пожалуйста, присоединяйтесь к нашему каналу в телеграм[/bold yellow]: [bold blue]@{base64.b64decode('Q1BNTnVrZXJPZmZpY2lhbA==').decode('utf-8')}[/bold blue].")
+                    if answ == "y": console.print(f"[bold yellow][!] Спасибо за использование нашего инструмента, пожалуйста, присоединяйтесь к нашему каналу в телеграм[/bold yellow]: [bold blue]@{base64.b64decode('').decode('utf-8')}[/bold blue].")
                     else: continue
                 else:
                     console.print("[bold red]НЕ УСПЕШНО.[/bold red]")
