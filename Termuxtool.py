@@ -4,7 +4,7 @@ import requests
 
 __ENDPOINT_URL__: str = "http://termuxtoolfa.cloudcenter.ovh/api"
 
-class CPMNuker:
+class termuxtool:
     def __init__(self, access_key) -> None:
         self.auth_token = None
         self.access_key = access_key
