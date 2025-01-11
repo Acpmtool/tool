@@ -103,7 +103,7 @@ if __name__ == "__main__":
         acc_password = prompt_valid_value("[bold][?] Пароль аккаунта[/bold]", "Password", password=False)
         acc_access_key = prompt_valid_value("[bold][?] Доступный ключ[/bold]", "Access Key", password=False)
         console.print("[bold cyan][%] Пытаемся войти[/bold cyan]: ", end=None)
-        cpm = Termuxtool.CPMNuker(acc_access_key)
+        cpm = Termuxtool.termuxtool(acc_access_key)
         login_response = cpm.login(acc_email, acc_password)
         if login_response != 0:
             if login_response == 100:
